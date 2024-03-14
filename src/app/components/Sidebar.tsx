@@ -1,4 +1,5 @@
 import React from "react";
+import LinkSide from "./LinkSide";
 
 const Leagues = [
     { id:1,name:"Premier League",href:"premier-league",emblem:"/img/leagues/premier_league.webp"},
@@ -24,7 +25,7 @@ const Sidebar:React.FC = ()=>{
                             return (
                                 <div key={league.id}
                                 className="flex">
-                                    {/*links */}
+                                    <LinkSide href={league.href} name={league.name} src={league.emblem}/>
                                 </div>
                             )
                         })
