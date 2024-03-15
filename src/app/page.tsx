@@ -9,7 +9,6 @@ export default async function Home() {
   const matchesDataFinished = getDataFinished?.matches
 
 
-
   const nd = new Date()
   const dateConvert = nd.toDateString()
 

@@ -9,7 +9,7 @@ const option:apiOptions = {
     }
 }
 
-export const getMatchesFootball = async()=>{
+export const getMatchesFootball = async ()=>{
     const matchData = await fetch("https://api.football-data.org/v4/matches", option)
     return matchData.json()
 }
@@ -24,7 +24,7 @@ const day = String(getDateMonth.getDate() + 1).padStart(2, '0')
 const yesterday = [year, month, day].join('-')
 
 export const getMatchesFootballFinished = async () => {
-    const matchData = await fetch(`https://api.football-data.org/v4/matches&date=${yesterday}`)
+    const matchData = await fetch(`https://api.football-data.org/v4/matches?date=${yesterday}`, option)
     return matchData.json()
 }
 
