@@ -4,6 +4,12 @@ const nextConfig = {
         remotePatterns: [
             {
               protocol: 'https',
+              hostname: 'www.cnet.com',
+              port: '',
+              pathname: '/*/**',
+            },
+            {
+              protocol: 'https',
               hostname: 'crests.football-data.org',
               port: '',
               pathname: '/*',
