@@ -1,5 +1,15 @@
+import { getMatchesFootballFinished, getMatchesFootball } from "@/api"
+import Status from "./components/Status"
 
-export default function Home() {
+export default async function Home() {
+  const getData = await getMatchesFootball()
+  const getDataFinished = await getMatchesFootballFinished()
+
+  const matchesData = getData?.matches
+  const matchesDataFinished = getDataFinished?.matches
+
+
+
   const nd = new Date()
   const dateConvert = nd.toDateString()
 
@@ -14,7 +24,7 @@ export default function Home() {
           <p>{dateConvert}</p>
         </div>
       </div>
-      {/* match data */}
+      <Status matchesList={matchesData} matchesListFinished={matchesDataFinished}/>
     </section>
   );
 }
